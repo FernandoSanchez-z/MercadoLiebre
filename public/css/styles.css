@@ -1,0 +1,352 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* head */    /* /head */
+
+/* body */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color:#ebebeb;
+    /* box-shadow: #666;
+    text-shadow: #666; */
+}
+
+/* header */
+
+header {
+    background-color: #EAC926;
+    padding: 10px;
+    position: fixed;
+    top:0;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+}
+
+.encabezado {
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.banner {
+    margin-top: 90px;
+    z-index: -3;
+    position: relative;
+
+}
+
+.logo {
+    width: 50%;
+}
+
+.lupita {
+    border: 1px solid #666;
+    padding: 5px;
+    border-radius: 3px;
+    background-color: white;
+    font-size: 11px;
+}
+
+.barra-lupita{
+    max-width: 30%;
+    align-items: center;
+    font-size: 10px
+}
+
+p {
+    font-size: 12px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.compra {
+    text-align: center;    
+}
+
+.navegacion {
+    display: none;
+}
+
+
+.burger-menu {
+    
+    font-size: 16px;
+    color: white;
+    background-color: #1259c3;
+    border-radius: 3px;
+    padding: 9px;
+
+}
+
+.icono_centrar {
+    text-align: center;
+}
+
+/* /header */
+
+/* main */
+
+main {
+    text-align: left;
+    box-sizing: 90vw;
+    margin-top: 150;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+h2 {
+    font-size: 24px;
+    color: #666;
+    padding-left: 3vw;
+}
+
+.producto {
+    margin: 20px;
+    width: 100%;
+    background-color: white;
+    position: relative;
+    z-index: 0;
+    transition: all 1s;
+ }
+
+.imagen-prod {
+    position: relative;
+    z-index: -2;
+}
+
+.caja_descripcion {
+    border-top: 3px solid #ebebeb;
+    background-color: white;
+    padding: 15px;
+    text-align: left;
+    position: relative;
+    z-index: 0;
+}
+
+.precio-dcto {
+    display: flex; 
+}
+
+.fa-truck {
+    background-color: #fff;
+    color: #39b54a;
+    border: 1px solid #39b54a;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 16px;
+    width: 30px;
+    height: 30px;
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+    transition: all 1s;
+}
+
+
+.precio {
+    font-size: 1rem;
+    width: 45%;
+
+}
+
+.descuento {
+    font-size: 16px;
+    color: #39b54a;
+    width: 55%;
+}
+
+.descripcion {
+    display: none;
+    font-size: 16px;
+    color: #666;
+}
+
+/* /main */
+
+/* footer */
+
+.icono_footer {
+    color: #1259c3;
+    font-size: 2rem;
+    margin: 5px;
+    transition: all 1s;
+}
+
+.icono_footer:hover {
+    color:#EAC926;
+    transform: rotate(90deg);
+}
+
+footer {
+    background-color: white;
+    color: #666;
+    padding: 3vw;
+}
+
+.article_footer {
+    text-align: center;
+}
+
+/* /footer */
+
+/* /body */
+
+/* Media quieries */
+
+@media (min-width: 415px) { /* Mínimo ancho para tablet */
+/*header*/
+.logo, .barra-lupita .compra {
+    width: 10%;
+    text-align: center;
+    font-size: 2.3vw;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    font-size: 2vw;
+    
+    margin-top: 0.5rem;
+}
+
+.lista1 {
+    display: flex;
+    align-items: center;
+    
+}
+
+
+ul li {
+    display: flex;
+    max-width: max-content;
+    align-items: center;
+    text-align: center;
+    margin: 5px 1%;
+    flex-wrap: nowrap;
+}
+
+ul li i{
+    margin: 10px;
+}
+
+
+.lista2 {
+    display: flex;
+    text-align: center;
+}
+
+/* /header-media*/
+
+/*main-media*/
+.descripcion {
+display: block;
+opacity: 0;
+position: relative;
+transition: all 1s;
+z-index: 1;
+}
+
+.producto:hover .descripcion {
+    opacity: 1;
+};
+
+.producto:hover .fa-truck {
+    opacity: 1;
+    transform: rotate(-90deg);
+};
+
+.producto {
+box-shadow: 0px 0px 10px rgb(100, 100, 100);
+width: 40%;
+}
+
+.producto:hover {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+.burger-menu {
+display: none;
+}
+
+.precio, .descuento{
+font-size: 1rem; 
+text-align: center;
+}
+
+}
+
+@media (min-width: 769px) { /* Mínimo ancho para desktop */
+
+/*header*/
+.logo, .barra-lupita, .compra {
+    font-size: 16px;
+ }
+
+ ul li {
+    margin: 5px 2.5vw;
+    font-size: 12px;
+}
+
+/* /header-media*/
+
+ /*main-media*/ 
+
+/*nav {
+  font-size: 1rem;
+       
+}*/
+
+.producto {
+width: 20%;
+}
+
+.precio-dcto {
+    font-size: 0.5rem; 
+}
+
+/* /main-media*/
+
+/*footer-media*/
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; 
+}
+
+footer h2 {
+    font-size: 17px;
+}
+
+.article_footer{
+    width: 30%;
+}
+
+.copyright {
+    display: block;
+    width: 100%;        
+}
+
+/* /footer-media*/
+
+}
